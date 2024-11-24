@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 2.8)
 
-project( VisualFeedback_Display )
+project( VisualFeedback )
 
 find_package( OpenCV REQUIRED )
 
-add_executable( VisualFeedback_Display Main.cpp )
+add_subdirectory( UDPImage )
 
-target_link_libraries( VisualFeedback_Display ${OpenCV_LIBS} -pthread )
+add_subdirectory( Main )
+
